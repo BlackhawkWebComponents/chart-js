@@ -21,7 +21,22 @@
 
 <body>
 
-<chart-js></chart-js>
+<template is="auto-binding">
+    <chart-js kind="Bar" data="{{barData}}"></chart-js>
+</template>
 
+<script>
+    var t = document.querySelector("template");
+    t.barData = {
+        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        datasets: [{
+            fillColor : "rgba(239,241,245,1)",
+            strokeColor : "rgba(0,0,0,0)",
+            highlightFill: "rgba(230,233,240,1)",
+            data: [65, 59, 80, 81, 56, 55, 40]
+        }]
+    };
+
+</script>
 </body>
 </html>
