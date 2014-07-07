@@ -3,6 +3,6 @@
   "private": true,
   "dependencies": {
     "polymer": "Polymer/polymer#master",
-    "chartjs": "nnnick/Chart.js#v1.0.1-beta"
+    "chartjs": "BlackhawkWebComponents/Chart.js#master"
   }
 }
