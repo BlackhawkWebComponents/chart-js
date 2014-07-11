@@ -29,7 +29,7 @@ TODO: fork chartjs and make changes made to for resize
 TODO: use polymer layout for chart with legend and get legend as json from chartjs api
 TODO: make it so you can pass in any case for types
 -->
-<polymer-element name="chart-js" attributes="data kind options showLegend">
+<polymer-element name="chart-js" attributes="data kind options showLegend height">
     <template>
         <style>
             :host {
@@ -96,10 +96,19 @@ TODO: make it so you can pass in any case for types
                 height: 100%;
                 border-radius: 5px;
             }
+            .canvas-holder {
+                margin:0;
+                padding:0;
+
+            }
+            .chart {
+                margin:0;
+                padding:0;
+            }
         </style>
 
         <div id="container" class="{{ {'labeled-chart-container': showLegend} | tokenList }}">
-            <div class="canvas-holder">
+            <div class="canvas-holder" style="{{ {height: height} | styleObject}}">
                 <canvas id="chart" width="250" height="250">
                 </canvas>
             </div>
